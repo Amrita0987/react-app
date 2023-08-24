@@ -23,4 +23,4 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 'react-demo'
+    workingDir: 'package.json'
