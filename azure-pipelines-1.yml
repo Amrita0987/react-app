@@ -23,7 +23,3 @@ steps:
     PublishProfilePath: '$(System.DefaultWorkingDirectory)/src/publish.xml'
     PublishProfilePassword: 'sTWj4q3AZZlJctS75jKJjEAxkJCYmft80lFmJjEnNDb1n9nlkj3vfic9iqx5'
     packageForLinux: '$(System.DefaultWorkingDirectory)/src'
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
