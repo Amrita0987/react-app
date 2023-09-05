@@ -7,12 +7,16 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build react app'
 
 
-- task: Npm@1
-  inputs:
-    command: 'install'
+
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'PublishProfile'
