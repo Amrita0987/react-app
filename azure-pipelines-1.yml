@@ -20,9 +20,9 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'PublishProfile'
-    PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
+    PublishProfilePath: '$(System.DefaultWorkingDirectory)src/pwd'
     PublishProfilePassword: 'sTWj4q3AZZlJctS75jKJjEAxkJCYmft80lFmJjEnNDb1n9nlkj3vfic9iqx5'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(System.DefaultWorkingDirectory)build'
 - script: |
     npm install
     npm run build
