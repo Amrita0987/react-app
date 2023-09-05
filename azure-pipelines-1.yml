@@ -22,7 +22,7 @@ steps:
     ConnectionType: 'PublishProfile'
     PublishProfilePath: '$(System.DefaultWorkingDirectory)/src/pwd'
     PublishProfilePassword: 'sTWj4q3AZZlJctS75jKJjEAxkJCYmft80lFmJjEnNDb1n9nlkj3vfic9iqx5'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/build'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/src'
 - script: |
     npm install
     npm run build
