@@ -13,7 +13,12 @@ npm
 - task: Npm@1
   inputs:
     command: 'install'
-
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'PublishProfile'
+    PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
+    PublishProfilePassword: 'sTWj4q3AZZlJctS75jKJjEAxkJCYmft80lFmJjEnNDb1n9nlkj3vfic9iqx5'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 - script: |
     npm install
     npm run build
