@@ -16,6 +16,5 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build React app
-        run: npm run build
-      - name: Run React app
-        run: npm start
+        run: serve -s build
+      
