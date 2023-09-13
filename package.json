@@ -1,8 +1,8 @@
 {
-  "name": "github-actions-node",
+  "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://amrita0987.github.io/github-actions-node",
+  "homepage": "https://amrita0987.github.io/react-app",
   "dependencies": {                                                       
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
