@@ -42,14 +42,12 @@ jobs:
 
         run: npm install
 
- 
+      - name: Run React app
+
+        run: npm start src/app.js
+
 
       - name: Build React app
 
         run: npm run build src/app.js
 
- 
-
-      - name: Run React app
-
-        run: npm start src/app.js
