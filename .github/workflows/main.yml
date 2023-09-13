@@ -34,8 +34,8 @@ jobs:
 
         git config --local user.name "Amrita0987"
         echo "Using Github Token: $GITHUB_TOKEN"
-        git clone https://github.com/Amrita0987/github-actions-node.git
-        git remote set-url origin "https://git:$GITHUB_TOKEN@github.com/Amrita0987/github-actions-node.git"
+        git clone https://github.com/Amrita0987/react-app.git
+        git remote set-url origin "https://git:$GITHUB_TOKEN@github.com/Amrita0987/react-app.git"
         npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
