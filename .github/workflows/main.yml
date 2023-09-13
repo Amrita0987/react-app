@@ -29,7 +29,8 @@ jobs:
     - name: Deploy with gh-pages
       run: |
         echo " Using github token: $GH_TOKEN"
-        git remote set-url origin https://git:${GHTOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        git clone https://github.com/Amrita0987/react-app.git
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
       env:
         GHTOKEN: ${{ secrets.GH_TOKEN }}
