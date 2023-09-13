@@ -33,17 +33,11 @@ jobs:
         git config --local user.email "Amrita.Saha@itcinfotech.com"
 
         git config --local user.name "Amrita0987"
+        echo "Using Github Token: $GH_TOKEN"
+        git clone https://github.com/Amrita0987/react-app.git
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-        git checkout --orphan gh-pages
-
-        git rm -rf .
-
-        mv build/* .
-
-        git add .
-
-        git commit -m "Deploy to GitHub Pages"
-
-        git branch -M gh-pages
-
-        git push -f origin gh-pages
+        
